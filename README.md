@@ -7,11 +7,11 @@ A simple API for download subtitle from opensubtitle for movies and series
 
 
 Change credentials.json file:
-```yaml
+```json
 {
-  'username': 'YOURUSER',
-  'password': 'YOURPASS',
-  'api-key': 'YOURAPIKEY'
+    "username": "YOURUSER",
+    "password": "YOURPASS",
+    "api-key": "YOURAPIKEY"
 }
 ```
 ```python
