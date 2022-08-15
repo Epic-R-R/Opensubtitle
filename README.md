@@ -18,27 +18,30 @@ Change credentials.json file:
 from openSubtitle import OpenSubtitles
 op = OpenSubtitles()
 op.login()
-file_info = os.get_subtitle_file_info("MOVIE FILE PATH", "en", True)
+file_info = os.search_for_subtitle("MOVIE FILE PATH", "en", True)
 op.download_subtitle(file_info['file_no'])
 ```
 
 ### Search for a subtitle:
 ```python
-get_subtitle_file_info(full_file_path, sublanguage, forced)
+search_for_subtitle(full_file_path, sublanguage, forced)
 ```
-* full_file_path = *required*
-* sublanguage = *required*
-* forced = *optional* (default=False)
+> full_file_path = **required**,
+> sublanguage = **required**,
+> forced = **optional** (default=False)
 
 Returns dictionary:
-
-    { file_no : XXXXX, file_name: XXXX }
-
+```dict
+{
+    file_no : file_no,
+    file_name: file_name
+}
+```
 ### Download subtitle:
 ```python
 download_subtitle(file_no, output_directory, output_filename, overwrite)
 ```
-* file_no = *required*
-* output_directory = *optional* (default=same as video file)
-* output_filename = *optional* (default=same as video file)
-* overwrite = *optional* (default=False)
+> file_no = **required**,
+> output_directory = **optional**
+> output_filename = **optional**
+> overwrite = **optional** (default=False)
