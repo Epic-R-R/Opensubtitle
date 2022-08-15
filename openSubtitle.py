@@ -67,7 +67,7 @@ class OpenSubtitles(object):
             raise SystemExit("Failed to login: " + reqerr)
         except ValueError as e:
             raise SystemExit("Failed to parse user JSON response: " + e)
-    def get_subtitle_file_info(self, full_file_path, sublanguage, forced=False):
+    def search_for_subtitle(self, full_file_path, sublanguage, forced=False):
 
         self.folder_path = str(os.path.dirname(full_file_path))
         self.file_name = str(os.path.basename(full_file_path))

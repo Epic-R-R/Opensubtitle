@@ -9,7 +9,7 @@ def main():
 
     print(f"Downloads remaining: {str(op.user_downloads_remaining)}")
 
-    file_info = op.get_subtitle_file_info("MOVIE FILE PATH", "en", True)
+    file_info = op.search_for_subtitle("MOVIE FILE PATH", "en", True)
 
     op.download_subtitle(file_info['file_no'])
 
